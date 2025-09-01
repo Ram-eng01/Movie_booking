@@ -1,0 +1,55 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Booking</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Movie Booking</h1>
+  </header>
+
+  <section class="movies">
+    <div class="movie-card">
+      <img src="movie1.jpg" alt="Movie 1"/>
+      <h2>Movie 1</h2>
+      <select class="showtime">
+        <option value="10">10:00 AM</option>
+        <option value="13">1:00 PM</option>
+      </select>
+    </div>
+    <div class="movie-card">
+      <img src="movie2.jpg" alt="Movie 2"/>
+      <h2>Movie 2</h2>
+      <select class="showtime">
+        <option value="11">11:00 AM</option>
+        <option value="17">5:00 PM</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="seat-selection">
+    <h3>Select Seats</h3>
+    <div class="screen">Screen</div>
+    <div class="row">
+      <div class="seat"></div><div class="seat occupied"></div><div class="seat"></div>
+    </div>
+    <p>Selected: <span id="count">0</span> | Price: ₹<span id="total">0</span></p>
+  </section>
+
+  <section class="booking-form">
+    <h3>Book Your Tickets</h3>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Your Name" required/>
+      <input type="email" id="email" placeholder="Your Email" required/>
+      <button type="submit">Confirm Booking</button>
+    </form>
+    <div id="confirmation"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
